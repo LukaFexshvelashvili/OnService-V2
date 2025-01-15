@@ -1,0 +1,55 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    colors: {
+      main: "#40AAFD",
+      mainLight: "#55B5FF",
+      bg: "#FBFBFB",
+      whiteIconBg: "rgba(255, 255, 255, 0.15)",
+      whiteIconBgHover: "rgba(255, 255, 255, 0.20)",
+      whiteCardBg: "rgba(255, 255, 255, 0.10)",
+      infoCardBg: "rgba(73, 207, 255, 0.1)",
+      decorBg: "rgba(255, 255, 255, 0.15)",
+      white: "#FFFFFF",
+      whiteHover: "#f6f6f6",
+      cyan: "#3BE1D9",
+      red: "#F72585",
+      purple: "#C71FFF",
+      yellow: "#FFCE1F",
+      viber: "#25D366",
+      facebook: "#316FF6",
+      instagram: "#E1306C",
+      call: "#3BE1D9",
+      descWhite: "rgba(255, 255, 255, 0.8)",
+      descBlack: "rgba(0, 0, 0, 0.4)",
+      headCard: "rgba(0, 0, 0, 0.75)",
+      head: "rgba(95, 95, 95, 0.8)",
+      text: "rgba(95, 95, 95, 0.9)",
+    },
+    fontSize: {
+      headText: "41px",
+      headDescText: "19px",
+      buttonText: "18px",
+      addonText: "17px",
+      logoText: "17px",
+    },
+    backdropBlur: {
+      whiteCard: "12px",
+      whiteIcon: "20px",
+      infoCard: "45px",
+    },
+    borderRadius: {
+      icon: "12px",
+    },
+    extend: {
+      fontFamily: {
+        onRegular: "onRegular",
+        onMedium: "onMedium",
+        onSemiBold: "onSemiBold",
+        onBold: "onBold",
+      },
+    },
+  },
+  plugins: [],
+};
