@@ -4,6 +4,7 @@ export default {
   theme: {
     colors: {
       main: "#40AAFD",
+      mainClear: "rgba(64, 171, 253, 0.1)",
       mainLight: "#55B5FF",
       bg: "#FBFBFB",
       whiteIconBg: "rgba(255, 255, 255, 0.15)",
@@ -29,6 +30,7 @@ export default {
     },
     fontSize: {
       headText: "41px",
+      headText2: "32px",
       headDescText: "19px",
       buttonText: "18px",
       addonText: "17px",
@@ -41,6 +43,8 @@ export default {
     },
     borderRadius: {
       icon: "12px",
+      projects: "15px",
+      infoCard: "15px",
     },
     extend: {
       fontFamily: {
@@ -49,6 +53,9 @@ export default {
         onSemiBold: "onSemiBold",
         onBold: "onBold",
       },
+    },
+    boxShadow: {
+      normal: "0px 4px 20px rgba(188, 188, 188, 0.15)",
     },
   },
   plugins: [],

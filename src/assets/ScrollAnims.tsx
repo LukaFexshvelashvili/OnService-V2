@@ -6,10 +6,14 @@ export function ScrollAnim(ref: any, classRemove: string, percentage: number) {
       if (
         ref.current &&
         ref.current.classList.contains(classRemove) &&
-        ref.current.offsetTop <=
-          window.scrollY + window.innerHeight * (1 - percentage / 100)
+        getOffsetTop(ref.current) <=
+          window.scrollY +
+            window.innerHeight -
+            Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
         ref.current.classList.remove(classRemove);
+      } else if (!ref.current.classList.contains(classRemove)) {
+        window.removeEventListener("scroll", onScroll);
       }
     };
     if (ref.current && ref.current.classList.contains(classRemove)) {
@@ -31,10 +35,15 @@ export function ScrollParent(
   useEffect(() => {
     let timeouts: any[] = [];
     const onScroll = () => {
+      console.log(ref.current, getOffsetTop(ref.current));
+
       if (
+        ref.current.firstChild.classList.contains(classRemove) &&
         ref.current?.firstChild &&
-        ref.current.firstChild.offsetTop <=
-          window.scrollY + window.innerHeight * (1 - percentage / 100)
+        getOffsetTop(ref.current.firstChild) <=
+          window.scrollY +
+            window.innerHeight -
+            Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
         timeouts.push(
           setTimeout(() => {
@@ -49,10 +58,16 @@ export function ScrollParent(
             });
           }, startDelay)
         );
+      } else if (!ref.current.lastChild.classList.contains(classRemove)) {
+        window.removeEventListener("scroll", onScroll);
+        timeouts.forEach(clearTimeout);
       }
     };
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // Initial check
+
+    if (ref.current && ref.current.firstChild.classList.contains(classRemove)) {
+      window.addEventListener("scroll", onScroll);
+      onScroll(); // Initial check
+    }
     return () => {
       window.removeEventListener("scroll", onScroll);
       timeouts.forEach(clearTimeout);
@@ -74,8 +89,10 @@ export function ScrollParentClassList(
         classRemove.some((cls) =>
           ref.current.firstChild.classList.contains(cls)
         ) &&
-        ref.current.offsetTop <=
-          window.scrollY + window.innerHeight * (1 - percentage / 100)
+        getOffsetTop(ref.current) <=
+          window.scrollY +
+            window.innerHeight -
+            Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
         timeouts.forEach(clearTimeout);
         Array.from(ref.current.children).forEach((el: any, idx) => {
@@ -85,13 +102,31 @@ export function ScrollParentClassList(
             )
           );
         });
+      } else if (
+        !classRemove.some((cls) =>
+          ref.current.firstChild.classList.contains(cls)
+        )
+      ) {
+        window.removeEventListener("scroll", onScroll);
+        timeouts.forEach(clearTimeout);
       }
     };
-    window.addEventListener("scroll", onScroll);
-    onScroll();
+    if (
+      ref.current &&
+      classRemove.some((cls) => ref.current.lastChild.classList.contains(cls))
+    ) {
+      window.addEventListener("scroll", onScroll);
+      onScroll(); // Initial check
+    }
     return () => {
       window.removeEventListener("scroll", onScroll);
       timeouts.forEach(clearTimeout);
     };
   }, [ref, classRemove, percentage, delay]);
+}
+
+function getOffsetTop(element: HTMLDivElement) {
+  const rect = element.getBoundingClientRect();
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  return rect.top + scrollTop;
 }

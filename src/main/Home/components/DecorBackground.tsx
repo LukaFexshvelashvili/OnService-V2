@@ -1,10 +1,10 @@
 export default function DecorBackground() {
   return (
-    <div className="from_right from_left absolute top-0 right-0 h-full w-full overflow-hidden duration-[2s] transition-all">
+    <div className="from_right from_left absolute top-0 right-0 h-full w-full overflow-hidden duration-[2s] transition-all flex justify-center items-center">
       <svg
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="  min-w-full h-full absolute left-0 z-[1]"
+        className="  min-w-full h-full absolute left-0 z-[1] "
       >
         <path
           d="M2041 126.5C1816.5 55.8333 1257.3 60.7 816.5 645.5"
@@ -138,6 +138,76 @@ export default function DecorBackground() {
           stroke-linecap="round"
           stroke-dasharray="32 32"
         />
+      </svg>
+    </div>
+  );
+}
+
+export function ProjectsDecor() {
+  return (
+    <div className="absolute w-full h-full flex items-center z-[-1]">
+      <svg
+        className="absolute"
+        width="1042"
+        height="719"
+        viewBox="0 0 1042 719"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_151_6)">
+          <path
+            d="M-161 10C94 109 689.2 247.6 1030 10"
+            stroke="#40AAFD"
+            stroke-opacity="0.1"
+            stroke-width="16"
+            stroke-linecap="round"
+          />
+          <path
+            d="M-46 728.929C116.167 588.429 532.9 346.329 902.5 501.929"
+            stroke="#40AAFD"
+            stroke-opacity="0.1"
+            stroke-width="16"
+            stroke-linecap="round"
+            stroke-dasharray="32 32"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_151_6">
+            <rect width="1042" height="719" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <svg
+        className="absolute right-0"
+        width="973"
+        height="749"
+        viewBox="0 0 973 749"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_151_5)">
+          <path
+            d="M1074 155.898C935.333 64.3978 579 -77.7022 263 85.8978"
+            stroke="#40AAFD"
+            stroke-opacity="0.1"
+            stroke-width="16"
+            stroke-linecap="round"
+            stroke-dasharray="32 32"
+          />
+          <path
+            d="M1103 720C806.667 738.667 173 689.6 9 344"
+            stroke="#40AAFD"
+            stroke-opacity="0.1"
+            stroke-width="16"
+            stroke-linecap="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_151_5">
+            <rect width="973" height="749" fill="white" />
+          </clipPath>
+        </defs>
       </svg>
     </div>
   );

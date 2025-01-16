@@ -8,6 +8,17 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: #fd4098;
+  color: white;
+}
+::-webkit-scrollbar {
+  background: #fbfbfb;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #40aafd;
+}
 @font-face {
   font-family: onRegular;
   src: url("./assets/fonts/OnService-Regular.ttf");
@@ -39,8 +50,8 @@ body {
   background: #40aafd;
   transform-origin: left;
   z-index: 2;
-  animation: 1.2s getlines linear forwards;
-  animation-delay: 1.4s;
+  animation: 0.6s getlines linear forwards;
+  animation-delay: 0.5s;
 }
 .from_left::after {
   content: "";
@@ -53,7 +64,7 @@ body {
   background: #40aafd;
   transform-origin: right;
   z-index: 4;
-  animation: 1.4s getlines linear forwards;
+  animation: 0.5s getlines linear forwards;
 }
 
 @keyframes getlines {
@@ -66,9 +77,13 @@ body {
 }
 @keyframes opacityShow {
   from {
+    transform: translateY(50px);
+
     opacity: 0;
   }
   to {
+    transform: translateY(-0px);
+
     opacity: 1;
   }
 }
@@ -86,8 +101,8 @@ body {
 .down {
   opacity: 0;
   transform: translateY(-120px);
-  animation: 1.6s downAnim ease-in-out forwards;
-  animation-delay: 1s;
+  animation: 0.8s downAnim ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 .container {
   padding-right: 15px;
@@ -141,15 +156,19 @@ body {
 
 .thenShow {
   opacity: 0;
-  animation: 1.4s opacityShow ease-out forwards;
-  animation-delay: 1.4s;
+  animation: 0.8s opacityShow ease-out forwards;
+  animation-delay: 0.6s;
 }
 .anim1 {
   opacity: 0;
-  transform: translateY(200px);
+  transform: translateY(150px);
+}
+.anim2 {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 .opshow {
   opacity: 0;
   animation: 1.2s opacityShow linear forwards;
-  animation-delay: 2.2s;
+  animation-delay: 0.8s;
 }
