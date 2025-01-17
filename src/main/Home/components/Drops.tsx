@@ -3,15 +3,11 @@ import { ScrollAnim } from "../../../assets/ScrollAnims";
 
 export default function Drops() {
   const anim = useRef<null | HTMLDivElement>(null);
-  ScrollAnim(anim, "anim2", 15);
+  ScrollAnim(anim, "anim2", 40);
   return (
-    <div
-      ref={anim}
-      className="flex justify-center transition-transform duration-1000 ease-out anim2"
-    >
+    <div ref={anim} className="flex justify-center">
       <svg
-        width="1718"
-        height="294"
+        className="w-full h-auto transition-transform duration-1000 ease-out anim2"
         viewBox="0 0 1718 294"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

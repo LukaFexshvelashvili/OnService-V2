@@ -2,21 +2,26 @@ import { useEffect } from "react";
 
 export function ScrollAnim(ref: any, classRemove: string, percentage: number) {
   useEffect(() => {
+    let runned = false;
+
     const onScroll = () => {
       if (
-        ref.current &&
-        ref.current.classList.contains(classRemove) &&
+        !runned &&
         getOffsetTop(ref.current) <=
           window.scrollY +
             window.innerHeight -
             Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
-        ref.current.classList.remove(classRemove);
-      } else if (!ref.current.classList.contains(classRemove)) {
+        runned = true;
+        ref.current.firstChild.classList.remove(classRemove);
+      } else if (runned) {
         window.removeEventListener("scroll", onScroll);
       }
     };
-    if (ref.current && ref.current.classList.contains(classRemove)) {
+    if (
+      ref.current.firstChild &&
+      ref.current.firstChild.classList.contains(classRemove)
+    ) {
       window.addEventListener("scroll", onScroll);
       onScroll();
     }
@@ -34,17 +39,17 @@ export function ScrollParent(
   if (!startDelay) startDelay = 0;
   useEffect(() => {
     let timeouts: any[] = [];
+    let runned = false;
     const onScroll = () => {
-      console.log(ref.current, getOffsetTop(ref.current));
-
       if (
-        ref.current.firstChild.classList.contains(classRemove) &&
-        ref.current?.firstChild &&
+        !runned &&
         getOffsetTop(ref.current.firstChild) <=
           window.scrollY +
             window.innerHeight -
             Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
+        runned = true;
+
         timeouts.push(
           setTimeout(() => {
             timeouts.forEach(clearTimeout); // Clear previous timeouts
@@ -83,17 +88,17 @@ export function ScrollParentClassList(
 ) {
   useEffect(() => {
     let timeouts: any[] = [];
+    let runned = false;
+
     const onScroll = () => {
       if (
-        ref.current?.firstChild &&
-        classRemove.some((cls) =>
-          ref.current.firstChild.classList.contains(cls)
-        ) &&
+        !runned &&
         getOffsetTop(ref.current) <=
           window.scrollY +
             window.innerHeight -
             Math.floor((ref.current.offsetHeight / 100) * percentage)
       ) {
+        runned = true;
         timeouts.forEach(clearTimeout);
         Array.from(ref.current.children).forEach((el: any, idx) => {
           classRemove.forEach((cls) =>
@@ -104,7 +109,7 @@ export function ScrollParentClassList(
         });
       } else if (
         !classRemove.some((cls) =>
-          ref.current.firstChild.classList.contains(cls)
+          ref.current.lastChild.classList.contains(cls)
         )
       ) {
         window.removeEventListener("scroll", onScroll);
@@ -127,6 +132,5 @@ export function ScrollParentClassList(
 
 function getOffsetTop(element: HTMLDivElement) {
   const rect = element.getBoundingClientRect();
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  return rect.top + scrollTop;
+  return rect.top + window.scrollY;
 }

@@ -32,7 +32,7 @@ export default function Starter() {
             ref={animRow}
             className="flex w-full justify-center gap-6 flex-wrap"
           >
-            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-cyan">
+            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-cyan hover:-rotate-[2deg] origin-bottom-left">
               <div className="h-[38px] aspect-square bg-cyan flex justify-center items-center rounded-[10px] shadow-[0_8px_0_rgba(59,225,217,0.25)]">
                 <WebIcon className="h-[24px] aspect-square" />
               </div>
@@ -40,7 +40,7 @@ export default function Starter() {
                 ვებგვერდის დამზადება
               </p>
             </div>
-            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-red">
+            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-red hover:-rotate-[2deg] origin-bottom-left">
               <div className="h-[38px] aspect-square bg-red flex justify-center items-center rounded-[10px] shadow-[0_8px_0_rgba(247,37,133,0.25)]">
                 <Design className="h-[24px] aspect-square" />
               </div>
@@ -48,7 +48,7 @@ export default function Starter() {
                 დიზაინის დამზადება
               </p>
             </div>
-            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-purple">
+            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-purple hover:-rotate-[2deg] origin-bottom-left">
               <div className="shrink-0 h-[38px] aspect-square bg-purple flex justify-center items-center rounded-[10px] shadow-[0_8px_0_rgba(199,31,255,0.25)]">
                 <Print className="h-[24px] aspect-square" />
               </div>
@@ -56,7 +56,7 @@ export default function Starter() {
                 რეკლამის/ბანერის დაბეჭდვა
               </p>
             </div>
-            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-yellow">
+            <div className="anim1 cursor-pointer w-[350px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-yellow hover:-rotate-[2deg] origin-bottom-left">
               <div className="h-[38px] aspect-square bg-yellow flex justify-center items-center rounded-[10px] shadow-[0_8px_0_rgba(255,206,31,0.25)]">
                 <Ads className="h-[24px] aspect-square" />
               </div>

@@ -5,6 +5,7 @@ export default {
     colors: {
       main: "#40AAFD",
       mainClear: "rgba(64, 171, 253, 0.1)",
+      mainClearHover: "rgba(64, 171, 253, 0.15)",
       mainLight: "#55B5FF",
       bg: "#FBFBFB",
       whiteIconBg: "rgba(255, 255, 255, 0.15)",
@@ -23,7 +24,7 @@ export default {
       instagram: "#E1306C",
       call: "#3BE1D9",
       descWhite: "rgba(255, 255, 255, 0.8)",
-      descBlack: "rgba(0, 0, 0, 0.4)",
+      descCard: "rgba(0, 0, 0, 0.4)",
       headCard: "rgba(0, 0, 0, 0.75)",
       head: "rgba(95, 95, 95, 0.8)",
       text: "rgba(95, 95, 95, 0.9)",
@@ -35,6 +36,7 @@ export default {
       buttonText: "18px",
       addonText: "17px",
       logoText: "17px",
+      smallText: "14px",
     },
     backdropBlur: {
       whiteCard: "12px",
@@ -42,6 +44,7 @@ export default {
       infoCard: "45px",
     },
     borderRadius: {
+      low: "8px",
       icon: "12px",
       projects: "15px",
       infoCard: "15px",
@@ -56,6 +59,7 @@ export default {
     },
     boxShadow: {
       normal: "0px 4px 20px rgba(188, 188, 188, 0.15)",
+      offerCard: "0px 4px 20px rgba(225, 225, 225, 0.15)",
     },
   },
   plugins: [],

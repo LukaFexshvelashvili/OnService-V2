@@ -172,3 +172,21 @@ body {
   animation: 1.2s opacityShow linear forwards;
   animation-delay: 0.8s;
 }
+.afterC::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  outline: solid 20px rgba(64, 171, 253, 0.15);
+  transform: translate(13px, 13px);
+}
+.afterS::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  outline: solid 20px rgba(64, 171, 253, 0.15);
+  transform: translate(13px, 13px);
+}
