@@ -14,7 +14,7 @@ export default function Offers() {
         </h2>
         <div
           ref={animRow}
-          className="flex gap-8 flex-wrap justify-center mt-24"
+          className="flex gap-8 flex-wrap justify-center mt-32"
         >
           <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">

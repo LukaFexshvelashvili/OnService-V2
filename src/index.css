@@ -7,7 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+section {
+  overflow: hidden;
+}
+/* DEBUG */
+/* * {
+  border: 2px solid red;
+} */
 ::selection {
   background: #fd4098;
   color: white;
@@ -189,4 +195,14 @@ body {
   border-radius: 20px;
   outline: solid 20px rgba(64, 171, 253, 0.15);
   transform: translate(13px, 13px);
+}
+.shdlo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: 10px;
+  width: 100%;
+  background-color: #55b5ff;
 }

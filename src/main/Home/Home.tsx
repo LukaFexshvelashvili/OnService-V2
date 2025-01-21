@@ -1,5 +1,6 @@
 import AboutUs from "./AboutUs";
 import Starter from "./components/Starter";
+import ContactUs from "./ContactUs";
 import Offers from "./Offers";
 import Projects from "./Projects";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Projects />
       <AboutUs />
       <Offers />
+      <ContactUs />
     </>
   );
 }
