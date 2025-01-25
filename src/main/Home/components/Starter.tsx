@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Ads, Arrow, Design, Print, WebIcon } from "../../../assets/icons";
 import { ScrollParent } from "../../../assets/ScrollAnims";
-import Navbar from "../../../components/Navbar";
 import Drops from "./Drops";
 import DecorBackground from "./DecorBackground";
 export default function Starter() {
@@ -12,7 +11,6 @@ export default function Starter() {
       <main className="relative min-h-[700px] h-screen bg-main flex justify-center items-center overflow-hidden">
         <DecorBackground />
         <div className="relative container h-full flex justify-evenly items-center flex-col z-10 ">
-          <Navbar />
           <div className="flex flex-col items-center gap-6 text-center thenShow">
             <h1 className="text-white text-headText font-onBold">ონ-სერვისი</h1>
             <p className="text-descWhite font-onMedium text-headDescText max-w-[550px] tracking-wider  leading-[28px]">

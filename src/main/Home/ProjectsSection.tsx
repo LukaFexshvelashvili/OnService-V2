@@ -10,9 +10,9 @@ import shot7 from "../../assets/images/webshots/7.png";
 import shot8 from "../../assets/images/webshots/8.png";
 import shot9 from "../../assets/images/webshots/9.webp";
 import { ProjectsDecor } from "./components/DecorBackground";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import { Arrow } from "../../assets/icons";
-export default function Projects() {
+export default function ProjectsSection() {
   const animRow = useRef<null | HTMLDivElement>(null);
   ScrollParent(animRow, "anim1", 15, 150);
 
@@ -34,9 +34,11 @@ export default function Projects() {
           <ProjectCard image={shot8} link="" />
           <ProjectCard image={shot9} link="" />
         </div>
-        <button className="w-[250px] h-[50px] text-white rounded-[12px] text-buttonText bg-main font-onSemiBold tracking-wider transition-colors hover:bg-mainLight">
-          მეტის ნახვა
-        </button>
+        <Link className=" rounded-[12px] " to={"/projects"}>
+          <button className="w-[250px] h-[50px] text-white rounded-[12px] text-buttonText bg-main font-onSemiBold tracking-wider transition-colors hover:bg-mainLight">
+            მეტის ნახვა
+          </button>
+        </Link>
       </div>
     </section>
   );
