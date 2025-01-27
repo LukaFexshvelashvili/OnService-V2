@@ -46,71 +46,7 @@ section {
 body {
   font-family: onSemiBold;
 }
-.from_right::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #40aafd;
-  transform-origin: left;
-  z-index: 2;
-  animation: 0.6s getlines linear forwards;
-  animation-delay: 0.5s;
-}
-.from_left::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #40aafd;
-  transform-origin: right;
-  z-index: 4;
-  animation: 0.5s getlines linear forwards;
-}
 
-@keyframes getlines {
-  from {
-    transform: scaleX(100%);
-  }
-  to {
-    transform: scaleX(0%);
-  }
-}
-@keyframes opacityShow {
-  from {
-    transform: translateY(50px);
-
-    opacity: 0;
-  }
-  to {
-    transform: translateY(-0px);
-
-    opacity: 1;
-  }
-}
-
-@keyframes downAnim {
-  from {
-    opacity: 0;
-    transform: translateY(-120px);
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.down {
-  opacity: 0;
-  transform: translateY(-120px);
-  animation: 0.8s downAnim ease-in-out forwards;
-  animation-delay: 0.5s;
-}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -166,19 +102,7 @@ body {
   animation: 0.8s opacityShow ease-out forwards;
   animation-delay: 0.6s;
 }
-.anim1 {
-  opacity: 0;
-  transform: translateY(150px);
-}
-.anim2 {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-.opshow {
-  opacity: 0;
-  animation: 1.2s opacityShow linear forwards;
-  animation-delay: 0.8s;
-}
+
 .afterC::after {
   content: "";
   position: absolute;
