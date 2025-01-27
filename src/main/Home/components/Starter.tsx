@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { Ads, Arrow, Design, Print, WebIcon } from "../../../assets/icons";
 import { ScrollParent } from "../../../assets/ScrollAnims";
 import Drops from "./Drops";
 import DecorBackground from "./DecorBackground";
-export default function Starter() {
+function Starter() {
   const animRow = useRef<null | HTMLDivElement>(null);
   ScrollParent(animRow, "anim1", 0, 150, 600);
   return (
@@ -72,3 +72,4 @@ export default function Starter() {
     </>
   );
 }
+export default memo(Starter);

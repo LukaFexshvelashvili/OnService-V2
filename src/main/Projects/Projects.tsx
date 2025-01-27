@@ -1,6 +1,22 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { projectsList, TprojectItem } from "../../storage/projectsList";
+import ProjectCard from "./components/ProjectCard";
 
 export default function Projects() {
+  const [filters, setFilters] = useState({
+    websites: true,
+    designs: true,
+    ads: true,
+  });
+  const filteredList = useMemo(() => {
+    return projectsList.filter((project) => {
+      if (filters.websites && project.type === 0) return true;
+      if (filters.designs && project.type === 1) return true;
+      if (filters.ads && project.type === 2) return true;
+      return false;
+    });
+  }, [filters]);
+
   return (
     <main className="min-h-screen">
       <div className="container mt-36">
@@ -9,23 +25,36 @@ export default function Projects() {
             პროექტები
           </h1>
           <div className="h-[4px] w-full bg-main rounded-low"></div>
-          <ProjectsFilter />
+          <ProjectsFilter setFilters={setFilters} />
+        </div>
+        <div className="flex gap-8 justify-center flex-wrap my-10">
+          {filteredList.map((project: TprojectItem) => (
+            <ProjectCard key={project.id} data={project} />
+          ))}
         </div>
       </div>
     </main>
   );
 }
 
-function ProjectsFilter() {
-  const [websites, setWebsites] = useState(true);
-  const [designs, setDesigns] = useState(true);
-  const [ads, setAds] = useState(true);
+function ProjectsFilter(props: { setFilters: Function }) {
+  const [filters, setFilters] = useState({
+    websites: true,
+    designs: true,
+    ads: true,
+  });
+  useEffect(() => {
+    props.setFilters(filters);
+  }, [filters]);
+
   return (
     <div className="flex items-center gap-3">
       <button
-        onClick={() => setWebsites((state: boolean) => !state)}
+        onClick={() =>
+          setFilters((state) => ({ ...state, websites: !state.websites }))
+        }
         className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
-          websites
+          filters.websites
             ? "text-white bg-websites transition-colors hover:bg-websitesHover afterLines"
             : "text-websites bg-websitesClear transition-colors hover:bg-websitesClearHover websitesLines"
         } `}
@@ -33,9 +62,11 @@ function ProjectsFilter() {
         ვებგვერდები
       </button>
       <button
-        onClick={() => setDesigns((state: boolean) => !state)}
+        onClick={() =>
+          setFilters((state) => ({ ...state, designs: !state.designs }))
+        }
         className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
-          designs
+          filters.designs
             ? "text-white bg-designs transition-colors hover:bg-designsHover afterLines"
             : "text-designs bg-designsClear transition-colors hover:bg-designsClearHover designsLines"
         } `}
@@ -43,9 +74,9 @@ function ProjectsFilter() {
         დიზაინები
       </button>
       <button
-        onClick={() => setAds((state: boolean) => !state)}
+        onClick={() => setFilters((state) => ({ ...state, ads: !state.ads }))}
         className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
-          ads
+          filters.ads
             ? "text-white bg-ads transition-colors hover:bg-adsHover afterLines"
             : "text-ads bg-adsClear transition-colors hover:bg-adsClearHover adsLines"
         } `}
