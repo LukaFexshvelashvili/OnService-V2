@@ -14,16 +14,16 @@ export default function ContactUs() {
           </h2>
 
           <form
-            className="min-w-[350px] w-[450px] flex flex-col gap-5 mt-20"
+            className="min-w-[350px] mobile:w-full mobileS:min-w-0 w-[450px] flex flex-col gap-5 mt-20"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
               type="text"
-              className="w-full h-[45px] px-4 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
+              className=" backdrop-blur-md w-full h-[45px] px-4 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
               placeholder="ტელეფონის ნომერი"
             />
             <textarea
-              className="w-full h-[110px] resize-none px-4 py-3 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
+              className=" backdrop-blur-md w-full h-[110px] resize-none px-4 py-3 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
               placeholder="შეტყობინება"
             ></textarea>
             <button className=" h-[45px] w-full text-main tracking-wider rounded-icon bg-white transition-colors hover:bg-whiteHover">

@@ -20,11 +20,14 @@ export default function Projects() {
   return (
     <main className="min-h-screen">
       <div className="container mt-36">
-        <div className="flex items-center justify-between  gap-5">
-          <h1 className="text-[28px] text-[rgba(31,31,31,0.70)] tracking-wide">
-            პროექტები
-          </h1>
-          <div className="h-[4px] w-full bg-main rounded-low"></div>
+        <div className="flex items-center justify-between  gap-5 mediumS:gap-8 mediumS:flex-col">
+          <div className="flex items-center justify-center text-center w-full gap-5 ">
+            <div className="hidden mediumS:block h-[4px] w-full bg-main rounded-low flex-1"></div>
+            <h1 className="text-[28px]  mediumS:text-[24px] small:text-[22px] text-[rgba(31,31,31,0.70)] tracking-wide ">
+              პროექტები
+            </h1>
+            <div className="h-[4px] w-full bg-main rounded-low flex-1"></div>
+          </div>
           <ProjectsFilter setFilters={setFilters} />
         </div>
         <div className="flex gap-8 justify-center flex-wrap my-10">
@@ -48,12 +51,12 @@ function ProjectsFilter(props: { setFilters: Function }) {
   }, [filters]);
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 mediumS:flex-1 mediumS:w-full mediumS:justify-center small:flex-wrap ">
       <button
         onClick={() =>
           setFilters((state) => ({ ...state, websites: !state.websites }))
         }
-        className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
+        className={`relative h-[40px] text-[14px] w-[160px] mobileS:w-full rounded-icon tracking-wider px-4 text-start ${
           filters.websites
             ? "text-white bg-websites transition-colors hover:bg-websitesHover afterLines"
             : "text-websites bg-websitesClear transition-colors hover:bg-websitesClearHover websitesLines"
@@ -65,7 +68,7 @@ function ProjectsFilter(props: { setFilters: Function }) {
         onClick={() =>
           setFilters((state) => ({ ...state, designs: !state.designs }))
         }
-        className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
+        className={`relative h-[40px] text-[14px] w-[160px] mobileS:w-full rounded-icon tracking-wider px-4 text-start ${
           filters.designs
             ? "text-white bg-designs transition-colors hover:bg-designsHover afterLines"
             : "text-designs bg-designsClear transition-colors hover:bg-designsClearHover designsLines"
@@ -75,7 +78,7 @@ function ProjectsFilter(props: { setFilters: Function }) {
       </button>
       <button
         onClick={() => setFilters((state) => ({ ...state, ads: !state.ads }))}
-        className={`relative h-[40px] text-[14px] w-[160px] rounded-icon tracking-wider px-4 text-start ${
+        className={`relative h-[40px] text-[14px] w-[160px] mobileS:w-full rounded-icon tracking-wider px-4 text-start ${
           filters.ads
             ? "text-white bg-ads transition-colors hover:bg-adsHover afterLines"
             : "text-ads bg-adsClear transition-colors hover:bg-adsClearHover adsLines"

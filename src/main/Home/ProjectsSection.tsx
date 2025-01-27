@@ -27,7 +27,7 @@ function ProjectsSection() {
           ))}
         </div>
         <Link className=" rounded-[12px] " to={"/projects"}>
-          <button className="w-[250px] h-[50px] text-white rounded-[12px] text-buttonText bg-main font-onSemiBold tracking-wider transition-colors hover:bg-mainLight">
+          <button className="w-[250px] small:w-[220px] h-[50px] small:h-[42px] text-white rounded-[12px] text-buttonText bg-main font-onSemiBold tracking-wider transition-colors hover:bg-mainLight">
             მეტის ნახვა
           </button>
         </Link>
@@ -39,7 +39,7 @@ function ProjectsSection() {
 function ProjectCardStarter(props: { image: string; link: string | null }) {
   return (
     <>
-      <div className="group relative h-[230px] w-[450px] rounded-projects bg-mainClear backdrop-blur-infoCard transition-[transform_opacity] duration-1000 anim1 hover:-translate-y-3  overflow-hidden border-4 border-mainClear shadow-normal ">
+      <div className="group relative h-[230px] w-[450px]  mediumS:h-[180px] mediumS:w-[330px] small:w-[290px] small:h-[160px] mobile:w-full mobile:aspect-video mobile:h-auto rounded-projects bg-mainClear backdrop-blur-infoCard transition-[transform_opacity] duration-1000 anim1 hover:-translate-y-3  overflow-hidden border-4 border-mainClear shadow-normal ">
         <img src={props.image} alt="website design" />
         {props.link ? (
           <>

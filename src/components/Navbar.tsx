@@ -20,21 +20,21 @@ export default function Navbar() {
       <div className="container flex items-center justify-between mx-auto">
         <Link
           to={"/"}
-          className={`h-[45px] w-[200px] rounded-icon ${
+          className={`h-[45px] small:h-[40px] backdrop-blur-whiteIcon w-[200px] small:w-[180px] rounded-icon ${
             blueMode
               ? "bg-white hover:bg-whiteIconBg shadow-nav"
               : "bg-whiteIconBg hover:bg-whiteIconBgHover"
-          } backdrop-blur-whiteIcon flex justify-start items-center px-5 gap-4 cursor-pointer transition-colors `}
+          } flex justify-start items-center px-5 gap-4 cursor-pointer transition-colors `}
         >
           <Icon
             className={` ${
               !blueMode ? "[&>rect]:fill-white" : "[&>rect]:fill-main"
-            } h-[20px] aspect-square `}
+            } h-[20px] small:h-[18px]  aspect-square `}
           />
           <p
             className={`${
               !blueMode ? "text-white" : "text-main"
-            } text-[16px]] tracking-wider select-none`}
+            } text-[16px] small:text-[15px] tracking-wider select-none`}
           >
             ონ-სერვისი
           </p>
@@ -45,11 +45,11 @@ export default function Navbar() {
               blueMode
                 ? "bg-white hover:bg-whiteIconBg shadow-nav"
                 : "bg-whiteIconBg hover:bg-whiteIconBgHover"
-            } h-[45px] aspect-square rounded-icon backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
+            } h-[45px] small:h-[40px] aspect-square rounded-icon backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
           >
             <img
               src={georgian_flag}
-              className="h-[24px] aspect-square "
+              className="h-[24px] small:h-[22px] aspect-square "
               alt="georgian flag"
             />
           </div>
@@ -58,10 +58,10 @@ export default function Navbar() {
               blueMode
                 ? "bg-white hover:bg-whiteIconBg shadow-nav"
                 : "bg-whiteIconBg hover:bg-whiteIconBgHover"
-            } h-[45px] aspect-square rounded-icon  backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
+            } h-[45px] small:h-[40px] aspect-square rounded-icon  backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
           >
             <Whatsapp
-              className={`h-[22px] aspect-square ${
+              className={`h-[22px] small:h-[20px] aspect-square ${
                 !blueMode ? "[&>path]:fill-white" : "[&>path]:fill-secondIcon"
               }`}
             />
@@ -71,10 +71,10 @@ export default function Navbar() {
               blueMode
                 ? "bg-white hover:bg-whiteIconBg shadow-nav"
                 : "bg-whiteIconBg hover:bg-whiteIconBgHover"
-            } h-[45px] aspect-square rounded-icon  backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
+            } h-[45px] small:h-[40px] aspect-square rounded-icon  backdrop-blur-whiteIcon flex justify-center items-center gap-4 cursor-pointer transition-colors`}
           >
             <Phone
-              className={`h-[22px] aspect-square ${
+              className={`h-[22px] small:h-[20px] aspect-square ${
                 !blueMode ? "[&>path]:fill-white" : "[&>path]:fill-secondIcon"
               }`}
             />

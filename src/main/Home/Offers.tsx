@@ -14,13 +14,13 @@ export default function Offers() {
         </h2>
         <div
           ref={animRow}
-          className="flex gap-8 flex-wrap justify-center mt-32"
+          className="flex gap-8 flex-wrap justify-center mt-32 small:gap-5 small:mt-24"
         >
-          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
+          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px] small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">
               <Seo className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
-            <h3 className="text-headCard text-[20px] text-center h-[35px]">
+            <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
               SEO ოპტიმიზაცია
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
@@ -28,11 +28,11 @@ export default function Offers() {
               შენი ვებგვერდი
             </p>
           </div>
-          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
+          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">
               <Lightning className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
-            <h3 className="text-headCard text-[20px] text-center h-[35px]">
+            <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
               სისწრაფე
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
@@ -40,22 +40,22 @@ export default function Offers() {
               და ხელმისაწვდომობა
             </p>
           </div>
-          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
+          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">
               <Lock className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
-            <h3 className="text-headCard text-[20px] text-center h-[35px]">
+            <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
               ძლიერი უსაფრთხოება
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
               მაღალი დონის უსაფრთხოება სპეციალურად შემუშავებული მეთოდებით
             </p>
           </div>
-          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
+          <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">
               <Service className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
-            <h3 className="text-headCard text-[20px] text-center h-[35px]">
+            <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
               დახმარების სერვისი
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">

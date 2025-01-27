@@ -5,7 +5,7 @@ function ProjectCard({ data }: { data: TprojectItem }) {
   const [loader, setLoader] = useState(true);
 
   return (
-    <div className="relative flex justify-center items-start rounded-projects bg-transparent h-[195px] w-[350px] overflow-hidden shadow-offerCard">
+    <div className="relative flex justify-center items-start rounded-projects bg-transparent h-[195px] w-[350px] projectsOPT:w-[98%] projectsOPT:h-auto projectsOPT:aspect-video overflow-hidden shadow-offerCard">
       {loader && (
         <div className="loader absolute h-full w-full flex justify-center items-center z-20 gap-1 top-0 left-0 bg-white">
           <div className="rounded-[50%] animate-[pulse_2.1s_0s_infinite]  bg-main h-[12px] aspect-square"></div>

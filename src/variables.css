@@ -1,0 +1,32 @@
+:root {
+  --headText: 41px;
+  --headText2: 32px;
+  --headDescText: 19px;
+  --buttonText: 18px;
+  --addonText: 17px;
+  --logoText: 17px;
+  --smallText: 14px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --headText: 32px;
+    --headText2: 24px;
+    --headDescText: 17px;
+    --buttonText: 15px;
+    --addonText: 15px;
+    --logoText: 15px;
+    --smallText: 12px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --headText: 26px;
+    --headText2: 26px;
+    --headDescText: 15px;
+    --buttonText: 14px;
+    --addonText: 15px;
+    --logoText: 15px;
+    --smallText: 12px;
+  }
+}
