@@ -15,6 +15,10 @@ import img14 from "../assets/images/projects/14.png";
 import img15 from "../assets/images/projects/15.png";
 import img16 from "../assets/images/projects/16.webp";
 import img17 from "../assets/images/projects/17.webp";
+import img18 from "../assets/images/projects/18.jpg";
+import img19 from "../assets/images/projects/19.jpg";
+import img20 from "../assets/images/projects/20.jpg";
+import img21 from "../assets/images/projects/21.jpg";
 
 export type TprojectItem = {
   id: number;
@@ -128,5 +132,33 @@ export const projectsList: TprojectItem[] = [
     image: img17,
     name: "HooBank",
     link: "https://atukajikuridze.github.io/hoobank/",
+  },
+  {
+    id: 18,
+    type: 2,
+    image: img18,
+    name: "CITROEN",
+    link: null,
+  },
+  {
+    id: 19,
+    type: 2,
+    image: img19,
+    name: "Cafe",
+    link: null,
+  },
+  {
+    id: 22,
+    type: 2,
+    image: img20,
+    name: "WOOD FACTORY",
+    link: null,
+  },
+  {
+    id: 21,
+    type: 2,
+    image: img21,
+    name: "CAR WASH",
+    link: null,
   },
 ];

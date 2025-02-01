@@ -80,6 +80,37 @@ export function ScrollParent(
   }, [ref, classRemove, percentage, delay]);
 }
 
+export function LoadParent(
+  ref: React.RefObject<HTMLElement>,
+  classRemove: string,
+  percentage: number,
+  delay: number,
+  startDelay: number = 0
+) {
+  useEffect(() => {
+    let timeouts: any[] = [];
+
+    const onReady = () => {
+      timeouts.push(
+        setTimeout(() => {
+          timeouts.forEach(clearTimeout);
+          Array.from(ref.current?.children || []).forEach((el, idx) => {
+            timeouts.push(
+              setTimeout(() => {
+                el.classList.remove(classRemove);
+              }, (idx + 1) * delay)
+            );
+          });
+        }, startDelay)
+      );
+    };
+    onReady();
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  }, [ref, classRemove, percentage, delay, startDelay]);
+}
 export function ScrollParentClassList(
   ref: any,
   classRemove: string[],

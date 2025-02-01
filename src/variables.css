@@ -22,10 +22,10 @@
 @media (max-width: 640px) {
   :root {
     --headText: 26px;
-    --headText2: 26px;
+    --headText2: 28px;
     --headDescText: 15px;
-    --buttonText: 14px;
-    --addonText: 15px;
+    --buttonText: 16px;
+    --addonText: 17px;
     --logoText: 15px;
     --smallText: 12px;
   }

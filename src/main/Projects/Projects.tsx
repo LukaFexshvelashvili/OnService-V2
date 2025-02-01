@@ -19,7 +19,7 @@ export default function Projects() {
 
   return (
     <main className="min-h-screen">
-      <div className="container mt-36">
+      <div className="container mt-36 mobile:mt-24">
         <div className="flex items-center justify-between  gap-5 mediumS:gap-8 mediumS:flex-col">
           <div className="flex items-center justify-center text-center w-full gap-5 ">
             <div className="hidden mediumS:block h-[4px] w-full bg-main rounded-low flex-1"></div>

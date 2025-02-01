@@ -30,20 +30,21 @@ export default function Footer() {
                 FACEBOOK
               </Link>
               <Link
+                target="_blank"
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"https://wa.me/+995598159215"}
               >
                 WHATSAPP
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"mailto:onservicege@gmail.com"}
               >
                 onservicege@gmail.com
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"tel:+995598159215"}
               >
                 +995 598 15 92 15
               </Link>
@@ -56,31 +57,31 @@ export default function Footer() {
             <div className="flex flex-col gap-1">
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"/"}
               >
                 მთავარი
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"/projects"}
               >
                 პროექტები
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"/"}
               >
                 ჩვენს შესახებ
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"/"}
               >
                 რას გთავაზობთ
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
-                to={""}
+                to={"/"}
               >
                 დაგვიკავშირდი
               </Link>
@@ -90,11 +91,11 @@ export default function Footer() {
       </div>
 
       <div className="bg-footerTop w-full h-[2px] mt-12"></div>
-      <div className="container flex justify-between font-onRegular py-2">
-        <p className="text-descWhite small:text-[14px] transition-color hover:text-white cursor-pointer">
+      <div className="container flex justify-between font-onRegular py-2 mobile:px-5">
+        <p className="text-descWhite small:text-[14px] mobile:text-[11px] mobile:text-left transition-color hover:text-white cursor-pointer">
           წესები და პირობები
         </p>
-        <p className="text-descWhite small:text-[14px] transition-color hover:text-white cursor-pointer">
+        <p className="text-descWhite small:text-[14px] mobile:text-[11px] mobile:text-right transition-color hover:text-white cursor-pointer">
           ONSERVICE 2025 © ყველა უფლება დაცულია
         </p>
       </div>

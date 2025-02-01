@@ -1,10 +1,10 @@
 export default function DecorBackground() {
   return (
-    <div className="absolute w-full h-full overflow-hidden">
+    <div className="absolute w-full flex justify-center items-center h-full overflow-hidden">
       <div className="z-[1] absolute top-0 left-0 h-full w-full bg-main animate-[4s_widthGrowth_infinite] origin-left"></div>
       <div className="z-[1] absolute top-0 left-0 h-full w-full bg-main animate-[3s_widthGrowth_infinite] origin-right"></div>
       <svg
-        className="absolute top-0 left-0 w-full"
+        className="absolute w-full mediumS:h-full mediumS:w-auto"
         viewBox="0 0 1920 1024"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -7,14 +7,14 @@ export default function Offers() {
   ScrollParent(animRow, "anim1", 15, 150);
 
   return (
-    <section className="py-24">
+    <section className="py-24 mobile:py-16" id="offers">
       <div className="relative container">
         <h2 className="text-headText2 text-head tracking-wider text-center ">
           ჩვენ გთავაზობთ
         </h2>
         <div
           ref={animRow}
-          className="flex gap-8 flex-wrap justify-center mt-32 small:gap-5 small:mt-24"
+          className="flex gap-8 flex-wrap justify-center mt-32 small:gap-5 small:mt-24 mobile:mt-16"
         >
           <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px] small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
             <div className="flex justify-center items-center h-[55px] aspect-square">
