@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import { Lightning, Lock, Seo, Service } from "../../assets/icons";
 import { ScrollParent } from "../../assets/ScrollAnims";
+import { useTranslation } from "react-i18next";
 
 export default function Offers() {
+  const { t } = useTranslation();
   const animRow = useRef<null | HTMLDivElement>(null);
   ScrollParent(animRow, "anim1", 15, 150);
 
@@ -10,7 +12,7 @@ export default function Offers() {
     <section className="py-24 mobile:py-16" id="offers">
       <div className="relative container">
         <h2 className="text-headText2 text-head tracking-wider text-center ">
-          ჩვენ გთავაზობთ
+          {t("weOffer")}
         </h2>
         <div
           ref={animRow}
@@ -21,11 +23,10 @@ export default function Offers() {
               <Seo className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
             <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
-              SEO ოპტიმიზაცია
+              {t("SEOoptimization")}
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
-              ოპტიმიზაცია Google საძიებო სისტემაში, რათა უფრო ხილვადი გახადო
-              შენი ვებგვერდი
+              {t("SEOoptimizationDesc")}
             </p>
           </div>
           <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
@@ -33,11 +34,10 @@ export default function Offers() {
               <Lightning className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
             <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
-              სისწრაფე
+              {t("speedOptimization")}
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
-              ვებგვერდის ოპტიმიზაცია ახალი ტექნოლოგიებით რათა გავზარდოთ სისწრაფე
-              და ხელმისაწვდომობა
+              {t("speedOptimizationDesc")}
             </p>
           </div>
           <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
@@ -45,10 +45,10 @@ export default function Offers() {
               <Lock className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
             <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
-              ძლიერი უსაფრთხოება
+              {t("highSecurity")}
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
-              მაღალი დონის უსაფრთხოება სპეციალურად შემუშავებული მეთოდებით
+              {t("highSecurityDesc")}
             </p>
           </div>
           <div className="flex flex-col gap-4 items-center w-[300px] h-[290px] small:w-[280px]  small:h-[270px] small:gap-3 rounded-icon bg-white shadow-offerCard px-5 py-8 transition-[transform,opacity]  duration-[0.4s] hover:-translate-y-5 anim1">
@@ -56,11 +56,10 @@ export default function Offers() {
               <Service className="h-[55px] aspect-square [&>path]:fill-main" />
             </div>
             <h3 className="text-headCard text-[20px] text-center h-[35px] small:h-[30px] small:text-[19px]">
-              დახმარების სერვისი
+              {t("customerService")}
             </h3>
             <p className="text-descCard text-[15px]  font-onMedium text-center leading-6">
-              ლაივ დახმარების სერვისი ჩვენ გაგცემთ ამომწურავ პასუხს ნებისმიერ
-              კითხვაზე
+              {t("customerServiceDesc")}
             </p>
           </div>
         </div>

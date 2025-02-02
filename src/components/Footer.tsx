@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Icon } from "../assets/icons";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className=" border-t-8 border-footerTop bg-main">
       <div className="container">
@@ -10,17 +12,18 @@ export default function Footer() {
             <div className=" backdrop-blur-whiteIcon flex justify-start items-start gap-4">
               <Icon className="h-[22px] aspect-square " />
               <p className="text-white tracking-wider text-[18px]">
-                ონ-სერვისი
+                {t("title")}
               </p>
             </div>
             <p className="max-w-[350px] w-[100%] text-descWhite font-onMedium tracking-wider">
-              ჩვენ გთავაზობთ თანამედროვე ციფრული სერვისების მომსახურებას,
-              ხელმისაწვდომად და სწრაფად
+              {t("description")}
             </p>
           </div>
           <div className="flex gap-4 flex-col">
             <div className=" backdrop-blur-whiteIcon flex justify-start items-start gap-4">
-              <p className="text-white tracking-wider text-[18px]">კონტაქტი</p>
+              <p className="text-white tracking-wider text-[18px]">
+                {t("contact")}
+              </p>
             </div>
             <div className="flex flex-col gap-1 items-start">
               <Link
@@ -52,38 +55,40 @@ export default function Footer() {
           </div>
           <div className="flex gap-4 flex-col">
             <div className=" backdrop-blur-whiteIcon flex justify-start items-start gap-4">
-              <p className="text-white tracking-wider text-[18px]">ნავიგაცია</p>
+              <p className="text-white tracking-wider text-[18px]">
+                {t("navigation")}
+              </p>
             </div>
             <div className="flex flex-col gap-1">
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
                 to={"/"}
               >
-                მთავარი
+                {t("home")}
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
                 to={"/projects"}
               >
-                პროექტები
+                {t("projects")}
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
                 to={"/"}
               >
-                ჩვენს შესახებ
+                {t("aboutUs")}
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
                 to={"/"}
               >
-                რას გთავაზობთ
+                {t("whatWeOffer")}
               </Link>
               <Link
                 className=" text-descWhite transition-color hover:text-white cursor-pointer"
                 to={"/"}
               >
-                დაგვიკავშირდი
+                {t("contactUs")}
               </Link>
             </div>
           </div>
@@ -93,10 +98,10 @@ export default function Footer() {
       <div className="bg-footerTop w-full h-[2px] mt-12"></div>
       <div className="container flex justify-between font-onRegular py-2 mobile:px-5">
         <p className="text-descWhite small:text-[14px] mobile:text-[11px] mobile:text-left transition-color hover:text-white cursor-pointer">
-          წესები და პირობები
+          {t("rulesAndPolicies")}
         </p>
         <p className="text-descWhite small:text-[14px] mobile:text-[11px] mobile:text-right transition-color hover:text-white cursor-pointer">
-          ONSERVICE 2025 © ყველა უფლება დაცულია
+          ONSERVICE 2025 © {t("allRightsServed")}
         </p>
       </div>
     </footer>

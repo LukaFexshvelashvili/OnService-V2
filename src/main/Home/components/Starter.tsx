@@ -3,7 +3,9 @@ import { Ads, Arrow, Design, Print, WebIcon } from "../../../assets/icons";
 import { LoadParent } from "../../../assets/ScrollAnims";
 import Drops from "./Drops";
 import DecorBackground from "./DecorBackground";
+import { useTranslation } from "react-i18next";
 function Starter() {
+  const { t } = useTranslation();
   const animRow = useRef<null | HTMLDivElement>(null);
   LoadParent(animRow, "anim1", 0, 150, 600);
   return (
@@ -12,10 +14,11 @@ function Starter() {
         <DecorBackground />
         <div className="relative container h-full flex justify-evenly items-center flex-col z-10 mobile:pt-[100px] mobile:gap-[60px] mobile:pb-[100px]">
           <div className="flex flex-col items-center gap-6 mediumS:gap-4 text-center thenShow mobile:px-[20px] mobile:py-[120px]">
-            <h1 className="text-white text-headText font-onBold">ონ-სერვისი</h1>
+            <h1 className="text-white text-headText font-onBold">
+              {t("title")}
+            </h1>
             <p className="text-descWhite font-onMedium text-headDescText max-w-[550px] tracking-wider  leading-[28px] mediumS:leading-[24px] mobile:leading-[22px]">
-              ჩვენ გთავაზობთ თანამედროვე ციფრული სერვისების მომსახურებას,
-              ხელმისაწვდომად და სწრაფად
+              {t("description")}
             </p>
             <div className="flex items-center gap-5 mt-5 mediumS:gap-3 mediumS:mt-3 mobileS:flex-col mobileS:w-full">
               <a
@@ -23,7 +26,7 @@ function Starter() {
                 href={"#contact"}
               >
                 <button className="h-full w-full text-main text-buttonText rounded-[12px] bg-white font-onSemiBold mobile:font-onBold tracking-wider transition-colors hover:bg-whiteHover">
-                  შეკვეთა
+                  {t("orderNow")}
                 </button>
               </a>
               <a
@@ -31,7 +34,7 @@ function Starter() {
                 href="#aboutus"
               >
                 <button className="dcbtaf flex justify-center items-center relative h-full w-full text-white text-buttonText rounded-[12px] bg-transparent font-onSemiBold  mobile:font-onBold tracking-wider transition-colors">
-                  ჩვენს შესახებ
+                  {t("aboutUs")}
                 </button>
               </a>
             </div>
@@ -45,7 +48,7 @@ function Starter() {
                 <WebIcon className="h-[24px] aspect-square" />
               </div>
               <p className=" w-full text-right text-white tracking-[1.2px] mediumS:tracking-wide font-onSemiBold text-addonText">
-                ვებგვერდის დამზადება
+                {t("makingWebsites")}
               </p>
             </div>
             <div className="anim1 cursor-pointer w-[350px] mobile:w-full mediumS:w-[280px] mediumS:h-[100px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] mediumS:p-[12px] mediumS:px-[16px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-red hover:-rotate-[2deg] origin-bottom-left">
@@ -53,7 +56,7 @@ function Starter() {
                 <Design className="h-[24px] aspect-square" />
               </div>
               <p className=" w-full text-right text-white tracking-[1.2px] mediumS:tracking-wide font-onSemiBold text-addonText">
-                დიზაინის დამზადება
+                {t("makingDesigns")}
               </p>
             </div>
             <div className="anim1 cursor-pointer w-[350px] mobile:w-full mediumS:w-[280px] mediumS:h-[100px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] mediumS:p-[12px] mediumS:px-[16px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-purple hover:-rotate-[2deg] origin-bottom-left">
@@ -61,7 +64,7 @@ function Starter() {
                 <Print className="h-[24px] aspect-square" />
               </div>
               <p className=" w-full text-right text-white tracking-[1.2px] mediumS:tracking-wide font-onSemiBold text-addonText">
-                რეკლამის/ბანერის დაბეჭდვა
+                {t("printingAdsBanners")}
               </p>
             </div>
             <div className="anim1 cursor-pointer w-[350px] mobile:w-full mediumS:w-[280px] mediumS:h-[100px] flex-col flex justify-between items-start h-[110px] rounded-[15px] bg-whiteCardBg backdrop-blur-whiteCard p-[15px] pb-[15px] mediumS:p-[12px] mediumS:px-[16px] shadow-[0_8px_0_rgba(103,103,103,0.05)] hovEffects transition-[transform_opacity] duration-[0.6s] after:bg-yellow hover:-rotate-[2deg] origin-bottom-left">
@@ -69,7 +72,7 @@ function Starter() {
                 <Ads className="h-[24px] aspect-square" />
               </div>
               <p className=" w-full text-right text-white tracking-[1.2px] mediumS:tracking-wide font-onSemiBold text-addonText">
-                GOOGLE რეკლამირება
+                {t("googleAds")}
               </p>
             </div>
           </div>

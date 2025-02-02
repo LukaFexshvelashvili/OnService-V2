@@ -84,6 +84,7 @@ export default {
         nav: "0px 4px 20px rgba(182, 182, 182, 0.1)",
         offerCard: "0px 4px 20px rgba(225, 225, 225, 0.15)",
         mobileNav: "0px 4px 10px rgba(182, 182, 182, 0.2)",
+        mainShadow: "0px 8px 30px rgba(91, 184, 255, 0.5)",
       },
       screens: {
         medium: { max: "1330px" },
@@ -92,6 +93,7 @@ export default {
         mobile: { max: "640px" },
         projectsOPT: { max: "480px" },
         mobileS: { max: "395px" },
+        mobileSS: { max: "370px" },
       },
     },
   },

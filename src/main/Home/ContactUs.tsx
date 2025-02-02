@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Phone, Whatsapp } from "../../assets/icons";
 import { ContactBgDecor, ContactStarter } from "./components/DecorBackground";
+import { useTranslation } from "react-i18next";
 
 export default function ContactUs() {
+  const { t } = useTranslation();
   return (
     <>
       <ContactStarter />
@@ -14,7 +16,7 @@ export default function ContactUs() {
 
         <div className="relative container flex flex-col items-center justify-center pb-20 pt-6 z-10 h-full">
           <h2 className="text-white tracking-wider text-headText2 font-onBold">
-            დაგვიკავშირდით
+            {t("contactUs")}
           </h2>
 
           <form
@@ -24,17 +26,17 @@ export default function ContactUs() {
             <input
               type="text"
               className=" backdrop-blur-md w-full h-[45px] px-4 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
-              placeholder="ტელეფონის ნომერი"
+              placeholder={t("phoneNumber")}
             />
             <textarea
               className=" backdrop-blur-md w-full h-[110px] resize-none px-4 py-3 tracking-wider rounded-icon placeholder:text-inputPlaceHolder bg-inputBg transition-colors focus:bg-inputHover text-[16px] outline-none text-white font-onMedium"
-              placeholder="შეტყობინება"
+              placeholder={t("message")}
             ></textarea>
             <button className=" h-[45px] w-full text-main tracking-wider rounded-icon bg-white transition-colors hover:bg-whiteHover">
-              გაგზავნა
+              {t("send")}
             </button>
           </form>
-          <p className="my-8 text-white text-[20px]">ან</p>
+          <p className="my-8 text-white text-[20px]">{t("or")}</p>
 
           <div className="flex gap-5 w-[190px] flex-wrap justify-center">
             <Link
@@ -59,7 +61,7 @@ export default function ContactUs() {
             <Link className="w-full rounded-icon" to={"tel:+995598159215"}>
               <button className="flex px-5 items-center h-[50px]  w-full rounded-icon bg-call transition-colors hover:bg-callHover">
                 <Phone className=" h-[24px] aspect-square [&>g]:stroke-white" />
-                <p className="mx-auto text-white tracking-wider">დარეკვა</p>
+                <p className="mx-auto text-white tracking-wider">{t("call")}</p>
               </button>
             </Link>
           </div>

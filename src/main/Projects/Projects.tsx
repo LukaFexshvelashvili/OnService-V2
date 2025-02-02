@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { projectsList, TprojectItem } from "../../storage/projectsList";
 import ProjectCard from "./components/ProjectCard";
+import { useTranslation } from "react-i18next";
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [filters, setFilters] = useState({
     websites: true,
     designs: true,
@@ -24,7 +26,7 @@ export default function Projects() {
           <div className="flex items-center justify-center text-center w-full gap-5 ">
             <div className="hidden mediumS:block h-[4px] w-full bg-main rounded-low flex-1"></div>
             <h1 className="text-[28px]  mediumS:text-[24px] small:text-[22px] text-[rgba(31,31,31,0.70)] tracking-wide ">
-              პროექტები
+              {t("projects")}
             </h1>
             <div className="h-[4px] w-full bg-main rounded-low flex-1"></div>
           </div>
@@ -41,6 +43,8 @@ export default function Projects() {
 }
 
 function ProjectsFilter(props: { setFilters: Function }) {
+  const { t } = useTranslation();
+
   const [filters, setFilters] = useState({
     websites: true,
     designs: true,
@@ -62,7 +66,7 @@ function ProjectsFilter(props: { setFilters: Function }) {
             : "text-websites bg-websitesClear transition-colors hover:bg-websitesClearHover websitesLines"
         } `}
       >
-        ვებგვერდები
+        {t("websites")}
       </button>
       <button
         onClick={() =>
@@ -74,7 +78,7 @@ function ProjectsFilter(props: { setFilters: Function }) {
             : "text-designs bg-designsClear transition-colors hover:bg-designsClearHover designsLines"
         } `}
       >
-        დიზაინები
+        {t("designs")}
       </button>
       <button
         onClick={() => setFilters((state) => ({ ...state, ads: !state.ads }))}
@@ -84,7 +88,7 @@ function ProjectsFilter(props: { setFilters: Function }) {
             : "text-ads bg-adsClear transition-colors hover:bg-adsClearHover adsLines"
         } `}
       >
-        სარეკლამო
+        {t("ads")}
       </button>
     </div>
   );

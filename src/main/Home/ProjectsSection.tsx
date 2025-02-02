@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import { Arrow } from "../../assets/icons";
 import { projectsList, TprojectItem } from "../../storage/projectsList";
 import { getColor, getName } from "../../func/typer";
+import { useTranslation } from "react-i18next";
 function ProjectsSection() {
+  const { t } = useTranslation();
   const animRow = useRef<null | HTMLDivElement>(null);
   ScrollParent(animRow, "anim1", 15, 150);
   const shuffledList = useMemo(() => {
@@ -19,7 +21,7 @@ function ProjectsSection() {
       <ProjectsDecor />
       <div className="container flex flex-col gap-16 items-center mobile:gap-10 mobile:mt-5">
         <h2 className="text-headText2 text-head tracking-wider text-center mobile:font-onBold ">
-          პროექტები
+          {t("projects")}
         </h2>
         <div ref={animRow} className="flex gap-5 flex-wrap justify-center">
           {shuffledList.map((project: TprojectItem) => (
@@ -28,7 +30,7 @@ function ProjectsSection() {
         </div>
         <Link className=" rounded-[12px] " to={"/projects"}>
           <button className="w-[250px] small:w-[220px] h-[50px] small:h-[42px] text-white rounded-[12px] text-buttonText bg-main font-onSemiBold tracking-wider transition-colors hover:bg-mainLight">
-            მეტის ნახვა
+            {t("seeMore")}
           </button>
         </Link>
       </div>
@@ -37,6 +39,7 @@ function ProjectsSection() {
 }
 
 function ProjectCardStarter(props: { data: TprojectItem }) {
+  const { t } = useTranslation();
   const [loader, setLoader] = useState(true);
 
   return (
@@ -79,7 +82,7 @@ function ProjectCardStarter(props: { data: TprojectItem }) {
                   to={props.data.link}
                   target="_blank"
                 >
-                  ნახვა
+                  {t("view")}
                   <Arrow className="h-[14px] aspect-square [&>path]:fill-white -rotate-90" />
                 </Link>
               </div>

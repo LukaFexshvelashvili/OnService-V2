@@ -3,8 +3,10 @@ import { TprojectItem } from "../../../storage/projectsList";
 import { getColor, getName } from "../../../func/typer";
 import { Arrow } from "../../../assets/icons";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({ data }: { data: TprojectItem }) {
+  const { t } = useTranslation();
   const [loader, setLoader] = useState(true);
 
   return (
@@ -46,7 +48,7 @@ function ProjectCard({ data }: { data: TprojectItem }) {
                 to={data.link}
                 target="_blank"
               >
-                ნახვა
+                {t("view")}
                 <Arrow className="h-[14px] aspect-square [&>path]:fill-white -rotate-90" />
               </Link>
             </div>

@@ -1,7 +1,10 @@
 import { memo } from "react";
 import computer from "../../assets/images/idle_computer.png";
+import { useTranslation } from "react-i18next";
 
 function AboutUs() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="aboutus"
@@ -14,36 +17,33 @@ function AboutUs() {
           <div className="flex mediumS:flex-col gap-10">
             <div className="flex gap-10 flex-col flex-1">
               <h3 className="text-main text-[24px] mediumS:text-[24px] mediumS:text-center mobile:tracking-wide mobile:font-onBold tracking-wider">
-                ჩვენს შესახებ
+                {t("aboutUs")}
               </h3>
               <div className="flex flex-col gap-7 ">
                 <div className="flex gap-3">
                   <div className="h-2 aspect-square rounded-[50%] translate-y-[10px] bg-main mobile:hidden"></div>
                   <p className="text-text text-[18px] mediumS:text-[17px] mediumS:tracking-wide tracking-wider mobile:text-center">
-                    ჩვენი გუნდი გთავაზობთ ციფრულ სერვისების სწრაფ და ხარისხიან
-                    მომსახურებას.
+                    {t("homepage.aboutus1")}
                   </p>
                 </div>
                 <div className="flex gap-3">
                   <div className="h-2 aspect-square rounded-[50%] translate-y-[10px] bg-main mobile:hidden"></div>
                   <p className="text-text text-[18px] mediumS:text-[17px] mediumS:tracking-wide tracking-wider mobile:text-center">
-                    მრავალ პროექტიანი გამოცდილებით გთავაზობთ ოპტიმიზირებულ
-                    პროდუქტებს, რომელიც მორგებული იქნება თქვენს მოთხოვნებზე.
+                    {t("homepage.aboutus2")}
                   </p>
                 </div>
                 <div className="flex gap-3">
                   <div className="h-2 aspect-square rounded-[50%] translate-y-[10px] bg-main mobile:hidden"></div>
                   <p className="text-text text-[18px] mediumS:text-[17px] mediumS:tracking-wide tracking-wider mobile:text-center">
-                    24/7 საათიანი დახმარების სერვისი და ლაივ რეჟიმში კონტაქტი
-                    დახმარების ცენტრთან{" "}
+                    {t("homepage.aboutus3")}
                   </p>
                 </div>
                 <div className="flex gap-3">
                   <div className="h-2 aspect-square rounded-[50%] translate-y-[10px] bg-main mobile:hidden"></div>
                   <p className="text-text text-[18px] mediumS:text-[17px] mediumS:tracking-wide tracking-wider mobile:text-center">
-                    გთავაზობთ თანხის დაბრუნების{" "}
+                    {t("homepage.aboutus4")}{" "}
                     <span className=" underline text-main">
-                      მორგებულ პოლიტიკას
+                      {t("homepage.policy")}
                     </span>
                   </p>
                 </div>

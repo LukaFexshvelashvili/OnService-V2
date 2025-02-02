@@ -1,3 +1,5 @@
+import { t } from "i18next";
+
 export function getColor(type: number) {
   return type == 0
     ? "bg-websites"
@@ -9,10 +11,10 @@ export function getColor(type: number) {
 }
 export function getName(type: number) {
   return type == 0
-    ? "ვებგვერდი"
+    ? t("website")
     : type == 1
-    ? "დიზაინი"
+    ? t("design")
     : type == 2
-    ? "რეკლამა"
+    ? t("ad")
     : "NULL";
 }

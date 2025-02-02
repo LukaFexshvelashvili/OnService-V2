@@ -1,8 +1,8 @@
 <svg width="1920" height="487" viewBox="0 0 1920 487" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_163_9)">
-<path d="M-205 230.093C-47.1667 116.26 673.5 102.899 1193 471.398" stroke="#55B5FF" stroke-width="15" stroke-linecap="round" stroke-dasharray="30 30"/>
-<path d="M666 441C823.251 327.273 1498.42 -227.726 2016 140.429" stroke="#55B5FF" stroke-width="15" stroke-linecap="round" stroke-dasharray="80 80"/>
-<g clip-path="url(#clip1_163_9)">
+<g clipPath="url(#clip0_163_9)">
+<path d="M-205 230.093C-47.1667 116.26 673.5 102.899 1193 471.398" stroke="#55B5FF" strokeWidth="15" strokeLinecap="round" strokeDasharray="30 30"/>
+<path d="M666 441C823.251 327.273 1498.42 -227.726 2016 140.429" stroke="#55B5FF" strokeWidth="15" strokeLinecap="round" strokeDasharray="80 80"/>
+<g clipPath="url(#clip1_163_9)">
 <path d="M-1 400.024L79.0417 397.11C159.083 393.976 319.167 388.478 479.25 394.141C639.333 400.024 799.417 417.619 959.5 414.705C1119.58 411.571 1279.67 388.478 1439.75 391.227C1599.83 393.976 1759.92 423.668 1839.96 438.129L1920 452.81V488H1839.96C1759.92 488 1599.83 488 1439.75 488C1279.67 488 1119.58 488 959.5 488C799.417 488 639.333 488 479.25 488C319.167 488 159.083 488 79.0417 488H-1V400.024Z" fill="#55B5FF"/>
 </g>
 </g>

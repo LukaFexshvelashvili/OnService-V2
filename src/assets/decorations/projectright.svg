@@ -1,7 +1,7 @@
 <svg width="973" height="749" viewBox="0 0 973 749" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_151_5)">
-<path d="M1074 155.898C935.333 64.3978 579 -77.7022 263 85.8978" stroke="#40AAFD" stroke-opacity="0.1" stroke-width="16" stroke-linecap="round" stroke-dasharray="32 32"/>
-<path d="M1103 720C806.667 738.667 173 689.6 9 344" stroke="#40AAFD" stroke-opacity="0.1" stroke-width="16" stroke-linecap="round"/>
+<g clipPath="url(#clip0_151_5)">
+<path d="M1074 155.898C935.333 64.3978 579 -77.7022 263 85.8978" stroke="#40AAFD" strokeOpacity="0.1" strokeWidth="16" strokeLinecap="round" strokeDasharray="32 32"/>
+<path d="M1103 720C806.667 738.667 173 689.6 9 344" stroke="#40AAFD" strokeOpacity="0.1" strokeWidth="16" strokeLinecap="round"/>
 </g>
 <defs>
 <clipPath id="clip0_151_5">

@@ -5,11 +5,15 @@ import "./index.css";
 import "./animations.css";
 import App from "./main/App.tsx";
 import { BrowserRouter } from "react-router-dom";
+import "./languages/translations";
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="OnService-V2/">
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter basename="OnService-V2/">
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );
