@@ -10,11 +10,11 @@ export default function ContactUs() {
       <ContactStarter />
       <section
         id="contact"
-        className="relative min-h-[600px] mobile:h-screen bg-gradient-to-b from-[#55B5FF] to-main"
+        className="relative min-h-[700px] mobile:h-screen bg-gradient-to-b from-[#55B5FF] to-main"
       >
         <ContactBgDecor />
 
-        <div className="relative container flex flex-col items-center justify-center pb-20 pt-6 z-10 h-full">
+        <div className="relative container flex flex-col items-center justify-center pb-20 z-10 pt-6 h-full">
           <h2 className="text-white tracking-wider text-headText2 font-onBold">
             {t("contactUs")}
           </h2>

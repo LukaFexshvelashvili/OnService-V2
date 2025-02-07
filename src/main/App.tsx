@@ -7,6 +7,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Arrow } from "../assets/icons";
+import NotFound from "./NotFound/NotFound";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -54,8 +55,11 @@ function App() {
       <Navbar />
       <Suspense fallback={<WebLoader />}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </Suspense>
       <ScrollToTop />

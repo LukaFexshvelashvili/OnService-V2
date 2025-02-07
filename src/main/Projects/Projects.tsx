@@ -20,7 +20,7 @@ export default function Projects() {
   }, [filters]);
 
   return (
-    <main className="min-h-screen">
+    <main className="h-screen min-h-[600px]">
       <div className="container mt-36 mobile:mt-24">
         <div className="flex items-center justify-between  gap-5 mediumS:gap-8 mediumS:flex-col">
           <div className="flex items-center justify-center text-center w-full gap-5 ">

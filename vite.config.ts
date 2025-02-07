@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/OnService-V2/",
   server: {
-    host: "192.168.100.8",
+    host: "192.168.100.5",
   },
 });
